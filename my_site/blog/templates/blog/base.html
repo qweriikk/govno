@@ -15,16 +15,16 @@
      <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     {% if title %}
-        <title>Книжная полка{{ title }}</title>
+        <title>Рецепты{{ title }}</title>
     {% else %}
-        <title>Книги на твой вкус</title>
+        <title>Ну рецепты</title>
     {% endif %}
 </head>
 <body >
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}"><i class='bx bx-tada-hover'></i> рецетики</a>
+          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}"><i class='bx bx-tada-hover'></i> рецептики</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,7 +48,7 @@
       </div>   {% endcomment %}
 
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-7 mx-auto mr-3">
           {% if messages %}
             {% for message in messages %}
               <div class="alert alert-{{ message.tags }}">
@@ -63,7 +63,7 @@
     </main>
     <!-- Футер закреплен внизу, независимо от количества постов на странице -->
     <footer style='width: 100%; position: relative' class="footer bg-dark">
-      <p><a href="{% url 'blog-home' %}">© Интересно!</a></p>
+      <p><a href="{% url 'blog-home' %}">© Лучшие рецепты картошки</a></p>
     </footer>
 
     <!-- Дополнительные скрипты JavaScript -->
